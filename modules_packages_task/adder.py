@@ -1,2 +1,2 @@
-def add(*nums):
-    return sum(nums)
+def add(a,b):
+    return a+b
