@@ -86,25 +86,23 @@ import math
 #6
 import gc
 import sys
+gc.disable()
+class SelfManaged:
+    object_count=0
+    def __init__(self):
+        SelfManaged.object_count+=1
+    def __del__(self):
+        print("gc invoked")
+        SelfManaged.object_count-=1
 
+    @classmethod
+    def get_current_count(cls):
+        return cls.object_count
 
-# gc.disable()
-# class SelfManaged:
-#     object_count=0
-#     def __init__(self):
-#         SelfManaged.object_count+=1
-#     def __del__(self):
-#         print("gc invoked")
-#         SelfManaged.object_count-=1
-#
-#     @classmethod
-#     def get_current_count(cls):
-#         return cls.object_count
-#
 # s1=SelfManaged()
 # s2=SelfManaged()
 # s3=s2
-# SelfManaged()
+# s4=SelfManaged()
 # print(SelfManaged.get_current_count())
 # # del s1
 # print(SelfManaged.get_current_count())
