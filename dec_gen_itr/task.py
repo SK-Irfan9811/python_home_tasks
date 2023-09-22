@@ -1,11 +1,11 @@
-#1
+# 1
 # l=[10,20,30,40]
 # itr=iter(l)
 # print(next(itr),next(itr))
 # itr=iter(l)#re assigning of itr identifier(overrides existing content)
 # print(next(itr),next(itr))
 
-#output
+# output
 # 10 20
 # 10 20
 
@@ -18,9 +18,9 @@
 # print(next(itr2))
 # print(next(itr1))
 
-#output
-#range function does not return a iterator instead returns a range object
-#so we need to convert it explicitly
+# output
+# range function does not return a iterator instead returns a range object
+# so we need to convert it explicitly
 # 10
 # 1
 # 11
@@ -33,7 +33,7 @@
 # itr=reversed([10,20,30,40])#reversed() function itself returns a iterator
 # print(itr.__next__(),itr.__next__())
 
-#output
+# output
 # 10 20
 # 40 30
 
@@ -51,21 +51,21 @@
 # print(next(g2))
 # print(next(g1))
 
-#output
+# output
 # 10
 # 1
 # 11
 # 5
 # 12
 
-#2
-#Which exception is raised upon reaching the last element of on iterable via its iterator.
-#ans:when any sequence is exhausted during iteration "StopIteration" exception is raised
+# 2
+# Which exception is raised upon reaching the last element of on iterable via its iterator.
+# ans:when any sequence is exhausted during iteration "StopIteration" exception is raised
 
-#3
-#__iter__() and __next__()
+# 3
+# __iter__() and __next__()
 
-#4
+# 4
 # def is_iterable(in_type):
 #     if '__iter__' in dir(in_type):
 #         return True
@@ -73,11 +73,11 @@
 # print(is_iterable(list))
 # print(is_iterable(int))
 
-#output
+# output
 # True
 # False
 
-#5
+# 5
 # def fibo(num):
 #     a,b=0,1
 #     while num>=a:
@@ -89,7 +89,7 @@
 #     print(i)
 
 
-#6
+# 6
 # def filter_list(lst,predicate):
 #     for i in lst:
 #         if(predicate(i)):
@@ -102,4 +102,4 @@
 #     print(i)
 
 
-#next() is preferred over __next__() because next() has a flexibility to tackle the StopIteraion exception
+# next() is preferred over __next__() because next() has a flexibility to tackle the StopIteraion exception
